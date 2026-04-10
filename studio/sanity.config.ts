@@ -6,7 +6,7 @@ import { schemaTypes } from './schemas';
 export default defineConfig({
   name: 'kfnlp',
   title: 'Kompetansesenteret for NLP',
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'placeholder',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'iis7kgo7',
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
   plugins: [structureTool(), visionTool()],
   schema: { types: schemaTypes },
