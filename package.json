@@ -1,0 +1,11 @@
+{
+  "name": "kompetansesenteret",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["web", "studio"],
+  "scripts": {
+    "dev": "npm --workspace web run dev",
+    "build": "npm --workspace web run build",
+    "studio": "npm --workspace studio run dev"
+  }
+}
