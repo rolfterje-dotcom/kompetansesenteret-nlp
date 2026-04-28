@@ -3,18 +3,26 @@ import { useSiteSettings } from '../lib/useSiteSettings';
 
 interface Props {
   className?: string;
-  imgClass?: string;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-export default function SiteLogo({ className = '', imgClass = 'h-11' }: Props) {
+const sizes = {
+  sm: { height: 32, cls: 'max-h-8' },
+  md: { height: 44, cls: 'max-h-11' },
+  lg: { height: 64, cls: 'max-h-16' },
+};
+
+export default function SiteLogo({ className = '', size = 'md' }: Props) {
   const settings = useSiteSettings();
+  const { height, cls } = sizes[size];
 
   if (settings?.logo) {
     return (
       <img
-        src={urlFor(settings.logo).height(88).auto('format').url()}
+        src={urlFor(settings.logo).height(height * 2).format('png').url()}
         alt={settings.title || 'Kompetansesenteret for NLP'}
-        className={`${imgClass} w-auto object-contain ${className}`}
+        className={`${cls} w-auto object-contain ${className}`}
+        style={{ background: 'transparent' }}
       />
     );
   }

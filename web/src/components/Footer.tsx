@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-prose grid gap-10 py-16 md:grid-cols-4">
         <div>
           <div className="mb-4">
-            <SiteLogo imgClass="h-10" />
+            <SiteLogo size="sm" />
           </div>
           <p className="text-sm leading-relaxed text-ink-700">
             Et læringsmiljø for personlig vekst, coaching og sertifiserte utdanninger innen NLP.
