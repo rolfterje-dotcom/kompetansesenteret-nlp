@@ -1,5 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 import { useState } from 'react';
+import SiteLogo from './SiteLogo';
 
 const nav = [
   { to: '/', label: 'Hjem' },
@@ -17,13 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-clay-100 bg-cream-50/90 backdrop-blur">
       <div className="container-prose flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center rounded-full bg-clay-500 font-serif text-lg text-cream-50 shadow-soft">
-            K
-          </span>
-          <span className="leading-tight">
-            <span className="block font-serif text-lg font-semibold text-ink-900">Kompetansesenteret</span>
-            <span className="block text-xs uppercase tracking-[0.22em] text-clay-500">for NLP</span>
-          </span>
+          <SiteLogo />
         </Link>
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((n) => (

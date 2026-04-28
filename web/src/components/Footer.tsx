@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
+import SiteLogo from './SiteLogo';
 
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-clay-100 bg-cream-100/70">
       <div className="container-prose grid gap-10 py-16 md:grid-cols-4">
         <div>
-          <div className="mb-4 flex items-center gap-2">
-            <span className="grid h-10 w-10 place-items-center rounded-full bg-clay-500 font-serif text-cream-50">K</span>
-            <span className="font-serif text-lg text-ink-900">Kompetansesenteret</span>
+          <div className="mb-4">
+            <SiteLogo imgClass="h-10" />
           </div>
           <p className="text-sm leading-relaxed text-ink-700">
             Et læringsmiljø for personlig vekst, coaching og sertifiserte utdanninger innen NLP.
