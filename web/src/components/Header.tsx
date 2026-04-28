@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-clay-100 bg-cream-50/90 backdrop-blur">
       <div className="container-prose flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <SiteLogo />
+          <SiteLogo size="lg" />
         </Link>
         <nav className="hidden items-center gap-7 md:flex">
           {nav.map((n) => (
